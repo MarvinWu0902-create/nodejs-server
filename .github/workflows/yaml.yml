@@ -1,0 +1,14 @@
+name: Deploy to server  # 工作流名稱
+
+on:
+  push:
+    branches:
+      - main  # 當推送到 main 分支時觸發
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger Webhook
+        run: curl -X POST http://your-server-ip:9000/webhook  # 這裡替換成你的 Webhook URL
