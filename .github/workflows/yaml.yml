@@ -7,8 +7,16 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
+    
+steps:
+      - name: Deploy Script
+        run: C:\Users\smite\Desktop\depoly.bat  # 在本地機器上運行你的部署腳本
 
-    steps:
-      - name: Trigger Webhook
-        run: curl -X POST http://59.124.63.227:8080/webhook  # 這裡替換成你的 Webhook URL
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Trigger Webhook
+#         run: curl -X POST http://59.124.63.227:8080/webhook  # 這裡替換成你的 Webhook URL
