@@ -11,4 +11,4 @@ jobs:
 
     steps:
       - name: Trigger Webhook
-        run: curl -X POST http://172.30.64.1:3000/webhook  # 這裡替換成你的 Webhook URL
+        run: curl -X POST http://59.124.63.227:3000/webhook  # 這裡替換成你的 Webhook URL
